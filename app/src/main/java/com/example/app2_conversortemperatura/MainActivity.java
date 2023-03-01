@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private EditText valorEditText;
     private Button coverterPCelsius;
+
+    private Button coverterPFahrenheit;
     private TextView valorConvertidoTextView;
 
     @Override
@@ -26,6 +28,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         coverterPCelsius = findViewById(R.id.button_converter_p_celsius);
         coverterPCelsius.setOnClickListener(this);
 
+        coverterPFahrenheit = findViewById(R.id.button_converter_p_fahrenheit);
+        coverterPFahrenheit.setOnClickListener(this);
+
     }
 
     @Override
@@ -35,7 +40,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             double valorCelsius;
             valorCelsius = CelsiusStrategy.getIntance().getConversion(valorEscrito);
 
-            valorConvertidoTextView.setText(String.format("%.2fº", valorCelsius));
+            valorConvertidoTextView.setText(String.format("%.2f ºC", valorCelsius));
+        }
+
+        if (view == coverterPFahrenheit){
+            double valorEscrito = getValue();
+            double valorFahrenheit;
+            valorFahrenheit = FahrenheitStrategy.getIntance().getConversion(valorEscrito);
+
+            valorConvertidoTextView.setText(String.format("%.2f ºF", valorFahrenheit));
         }
     }
 
