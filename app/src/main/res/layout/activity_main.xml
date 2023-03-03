@@ -7,6 +7,9 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
+
     <EditText
         android:id="@+id/edittext_valor"
         android:layout_width="match_parent"
@@ -17,36 +20,89 @@
         android:hint="@string/temperatura"
         android:textColorHint="#aaa"/>
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Digite de qual temperatura você está querendo converter:"
+        android:textAlignment="center"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:orientation="horizontal">
 
+        <CheckBox
+            android:id="@+id/checkbox_celsius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckboxClicked"
+            android:text="Celsius"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_fahr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckboxClicked"
+            android:text="Fahrenheit" />
+
+        <CheckBox
+            android:id="@+id/checkbox_kelvin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCheckboxClicked"
+            android:text="Kelvin" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Digite para qual temperatura você está querendo converter:"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal">
+    <Button
+        android:id="@+id/button_converter_p_celsius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+        android:text="@string/celsius"
+        android:textColor="@color/black"
+        android:backgroundTint="#D3D3D3"/>
+
+
+    <Button
+        android:id="@+id/button_converter_p_fahrenheit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+        android:textColor="@color/black"
+        android:text="@string/fahrenheit"
+        android:backgroundTint="#D3D3D3"/>
+
         <Button
-            android:id="@+id/button_converter_p_celsius"
+            android:id="@+id/button_converter_p_kelvin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:text="@string/celsius"
             android:textColor="@color/black"
+            android:text="@string/kelvin"
             android:backgroundTint="#D3D3D3"/>
-
-
-        <Button
-            android:id="@+id/button_converter_p_fahrenheit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:textColor="@color/black"
-            android:text="@string/fahrenheit"
-            android:backgroundTint="#D3D3D3"/>
-
     </LinearLayout>
 
     <TextView
