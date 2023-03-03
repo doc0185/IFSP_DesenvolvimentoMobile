@@ -24,7 +24,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Digite de qual temperatura você está querendo converter:"
+        android:text="@string/digite_de_qual_temperatura_voc_est_querendo_converter"
         android:textAlignment="center"/>
 
     <LinearLayout
@@ -39,21 +39,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onCheckboxClicked"
-            android:text="Celsius"/>
+            android:layout_weight="1"
+            android:text="@string/celsius"   />
 
         <CheckBox
             android:id="@+id/checkbox_fahr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onCheckboxClicked"
-            android:text="Fahrenheit" />
+            android:layout_weight="1"
+            android:text="@string/fahrenheit" />
 
         <CheckBox
             android:id="@+id/checkbox_kelvin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onCheckboxClicked"
-            android:text="Kelvin" />
+            android:layout_weight="1"
+            android:text="@string/kelvin" />
 
 
     </LinearLayout>
@@ -61,7 +64,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Digite para qual temperatura você está querendo converter:"
+        android:text="@string/digite_para_qual_temperatura_voc_est_querendo_converter"
         android:textAlignment="center"/>
 
     <LinearLayout

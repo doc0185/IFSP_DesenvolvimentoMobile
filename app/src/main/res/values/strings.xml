@@ -8,4 +8,6 @@
     <string name="fahrenheit">Fahrenheit</string>
     <string name="celsius">Celsius</string>
     <string name="kelvin">Kelvin</string>
+    <string name="digite_de_qual_temperatura_voc_est_querendo_converter">Digite de qual temperatura você está querendo converter:</string>
+    <string name="digite_para_qual_temperatura_voc_est_querendo_converter">Digite para qual temperatura você está querendo converter:</string>
 </resources>
