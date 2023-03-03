@@ -22,6 +22,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private int tipoTemperatura;
     private TextView valorConvertidoTextView;
 
+    private CheckBox celsius;
+    private CheckBox fahrenheit;
+    private CheckBox kelvin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +43,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         coverterPKelvin = findViewById(R.id.button_converter_p_kelvin);
         coverterPKelvin.setOnClickListener(this);
 
+        celsius = findViewById(R.id.checkbox_celsius);
+        fahrenheit = findViewById(R.id.checkbox_fahr);
+        kelvin = findViewById(R.id.checkbox_kelvin);
+
     }
 
     public void onCheckboxClicked(View view) {
@@ -50,16 +58,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.checkbox_celsius:
                 if (checked){
                     tipoTemperatura = 1;
+                    fahrenheit.setChecked(false);
+                    kelvin.setChecked(false);
                 }
                 break;
             case R.id.checkbox_fahr:
                 if (checked){
                     tipoTemperatura = 2;
+                    celsius.setChecked(false);
+                    kelvin.setChecked(false);
                 }
                 break;
             case R.id.checkbox_kelvin:
                 if (checked){
                     tipoTemperatura = 3;
+                    celsius.setChecked(false);
+                    fahrenheit.setChecked(false);
                 }
                 break;
 
